@@ -1,7 +1,7 @@
-function test(){
+export default function test(){
+    let name ='mighka';
     return(
-        <p>Testing module connection</p>
+        <p> Testing {name} module connection</p>
     )
 }
 
-export default test;

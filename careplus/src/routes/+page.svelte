@@ -16,7 +16,15 @@
 
     </section>
     <footer>
-        <h4 class="footer-heading">Footer</h4>
+        <div class="footer-flexbox">
+            <div class="whatsapp-icon">
+                <img src="src/lib/assets/images/whatsapp.png" alt="whatsapp icon"/>
+            </div>
+            <h4 class="footer-heading">Connect</h4>
+            <div class="chat-icon">
+
+            </div>
+        </div> 
     </footer>
 </main>
 
@@ -57,16 +65,33 @@
         margin: 0;
         font-size: 1.5rem;
         text-decoration: underline;
-    }   
-    .footer-heading{
-        margin: 0;
-        font-size: 1.2rem;
+        padding: 0.5%;
+        background-color: rgba(67, 62, 62, 0.865);
+        border-radius: 1%;
+    } 
+    .footer-flexbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
     }
-
+    .whatsapp-icon{
+        font-size: 1.5rem;
+        margin: 0;
+        padding-left: 3.5%;
+        padding-right: 1.5%;
+        height: 2rem;          /* scales with font size / viewport */
+        width: auto;
+    }
+    .whatsapp-icon img{
+        height: 100%;
+        width: auto;
+    }
     .top-logo-icon{
         font-size: 2rem;
         margin: 0;
-        padding-left: 5%;
+        padding-left: 3.5%;
+        padding-right: 1.5%;
         height: 2.8rem;          /* scales with font size / viewport */
         width: auto;
     }
@@ -79,6 +104,7 @@
         font-size: 1rem;
         margin: 0;
         padding-right: 5%;
+        padding-left: 5%;
         height: 2rem;          /* scales with font size / viewport */
         width: auto;
     }

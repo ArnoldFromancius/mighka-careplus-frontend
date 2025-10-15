@@ -1,13 +1,13 @@
 
 <main>
     <header>
-        <h1 class="heading">Mighka CarePlus</h1>
+        <h1 class="main-heading">Mighka CarePlus</h1>
     </header>
     <section>
 
     </section>
     <footer>
-
+        <h4 class="footer-heading">Footer</h4>
     </footer>
 </main>
 
@@ -32,10 +32,14 @@
         padding: 1rem;
     
     }
-    .heading{
+    .main-heading{
         margin: 0;
         font-size: 1.5rem;
     }   
+    .footer-heading{
+        margin: 0;
+        font-size: 1.2rem;
+    }
 
     section{
         overflow: auto;

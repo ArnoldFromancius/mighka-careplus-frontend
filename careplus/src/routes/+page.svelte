@@ -1,7 +1,7 @@
 
 <main>
     <header>
-        <h1 class="main-heading">Mighka CarePlus</h1>
+        <h1 class="main-heading">Mighka CarePlus+</h1>
     </header>
     <section>
 
@@ -25,10 +25,15 @@
         overflow: hidden;
         height: 100vh;
         text-align: center;
+        background-image: url("src/lib/assets/images/banner.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     header{
-        background-color: #f0f0f0;
+        background-color: #1e1d1db6;
+        color: antiquewhite;
         padding: 1rem;
     
     }
@@ -46,7 +51,8 @@
     }
 
     footer{
-        background-color: #f0f0f0;
+        color:antiquewhite;
+        background-color: #1e1d1de2;
         padding: 1rem;
     }
 

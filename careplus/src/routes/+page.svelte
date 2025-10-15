@@ -2,9 +2,13 @@
 <main>
     <header>
         <div class="header-flexbox">
-            <h1 class="top-logo-icon">logo</h1>
+            <div class="top-logo-icon">
+                <h1>logo</h1>
+            </div>
             <h1 class="main-heading">Mighka CarePlus+</h1>
-            <h1 class="top-user-icon">user</h1>
+            <div class="top-user-icon">
+                <img src="src/lib/assets/images/user.png" alt="user icon"/>
+            </div>
         </div>
         
     </header>
@@ -60,16 +64,27 @@
     }
 
     .top-logo-icon{
-        font-size: 1rem;
+        font-size: 2rem;
         margin: 0;
         padding-left: 5%;
+        height: 2rem;          /* scales with font size / viewport */
+        width: auto;
     }
 
     .top-user-icon{
         font-size: 1rem;
         margin: 0;
         padding-right: 5%;
+        height: 2rem;          /* scales with font size / viewport */
+        width: auto;
     }
+    .top-user-icon img{
+        height: 100%;
+        width: auto;
+        border-radius: 50%;
+        border: 2px solid antiquewhite;
+    }
+    
     section{
         overflow: auto;
     }

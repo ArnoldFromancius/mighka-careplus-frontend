@@ -1,32 +1,49 @@
-<div class="heading1">
-<h1>Mighka CarePlus+</h1>
-</div>
-<div>
-    <img src="src/lib/assets/images/banner.jpg" alt="Mighka CarePlus+ banner"/>
-</div>
+
+<main>
+    <header>
+        <h1 class="heading">Mighka CarePlus</h1>
+    </header>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+</main>
+
+
 <style lang="css">
-    h1 {
-        font-size: 2.0rem;
-        font-weight: bold;
-        color: #fce66b;
-        margin-bottom: 1rem;
+    body{
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    main{
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        overflow: hidden;
+        height: 100vh;
         text-align: center;
-        background-color: rgb(24, 47, 44);
     }
 
-    img{
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    header{
+        background-color: #f0f0f0;
+        padding: 1rem;
+    
+    }
+    .heading{
+        margin: 0;
+        font-size: 1.5rem;
+    }   
+
+    section{
+        overflow: auto;
     }
 
-    .heading1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 4rem;
-        background-color: rgb(7, 15, 14);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    footer{
+        background-color: #f0f0f0;
+        padding: 1rem;
     }
+
 </style>

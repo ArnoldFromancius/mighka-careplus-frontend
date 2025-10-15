@@ -1,7 +1,12 @@
 
 <main>
     <header>
-        <h1 class="main-heading">Mighka CarePlus+</h1>
+        <div class="header-flexbox">
+            <h1 class="top-logo-icon">logo</h1>
+            <h1 class="main-heading">Mighka CarePlus+</h1>
+            <h1 class="top-user-icon">user</h1>
+        </div>
+        
     </header>
     <section>
 
@@ -37,15 +42,34 @@
         padding: 1rem;
     
     }
+    
+    .header-flexbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .main-heading{
         margin: 0;
         font-size: 1.5rem;
+        text-decoration: underline;
     }   
     .footer-heading{
         margin: 0;
         font-size: 1.2rem;
     }
 
+    .top-logo-icon{
+        font-size: 1rem;
+        margin: 0;
+        padding-left: 5%;
+    }
+
+    .top-user-icon{
+        font-size: 1rem;
+        margin: 0;
+        padding-right: 5%;
+    }
     section{
         overflow: auto;
     }

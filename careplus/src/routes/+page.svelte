@@ -1,8 +1,8 @@
-<script>
-    let expandedView = null; // can be 'left', 'center', or 'right';   
+<script lang="ts">
+    let expandedView: 'left' | 'middle' | 'right' | null = null;   
     
-    function expandView(section) {
-        expandedView = expandedView === section ? null : section;
+    function toggleView(view: 'left' | 'middle' | 'right') {
+        expandedView = expandedView === view ? null : view;
     }
 
 </script>
@@ -21,20 +21,20 @@
         
     </header>
     <section>
-        <div class="main-content-flexbox">
+        <div class="main-content-flexbox {expandedView ? `expanded-${expandedView}` : ''}">
             <div class="services-section">
                 <div class="section-resize">
-                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon"/>
+                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('left')}/>
                 </div>
             </div>
             <div class="schedule-section">
                 <div class="section-resize">
-                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon"/>
+                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('middle')}/>
                 </div>
             </div>
             <div class="posts-section">
                 <div class="section-resize">
-                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon"/>
+                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('right')}/>
                 </div>
             </div>
         </div>
@@ -175,8 +175,40 @@
         align-items: center;     /* vertical centering */
     }
 
+    /* Adjust section widths based on expandedView state */
+    .main-content-flexbox.expanded-left .services-section{
+        flex: 4;
+    }
+    .main-content-flexbox.expanded-left .posts-section{
+        flex: 0;
+    }
+    .main-content-flexbox.expanded-left .schedule-section{
+        flex: 0;
+    }
+
+    .main-content-flexbox.expanded-middle .schedule-section{
+        flex: 4;
+    }
+    .main-content-flexbox.expanded-middle .posts-section{
+        flex: 0;
+    }
+    .main-content-flexbox.expanded-middle .services-section{
+        flex: 0;
+    }
+
+    .main-content-flexbox.expanded-right .posts-section{
+        flex: 4;
+    }
+    .main-content-flexbox.expanded-right .schedule-section{
+        flex: 0;
+    }
+    .main-content-flexbox.expanded-right .services-section{
+        flex: 0;
+    }
+
+
     /*Mobile device adjustments*/
-    @media(max-width: 768px){
+    @media(max-width: 900px){
         .main-content-flexbox{
             flex-direction: column;
             align-items: center;

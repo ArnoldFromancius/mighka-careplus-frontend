@@ -44,9 +44,8 @@
   .services-info li {
     background: #454343;
     color: rgb(255, 255, 255);
+    border: 5px solid rgb(156, 109, 47);
     border-radius: 12px;
-    border-color: antiquewhite;
-    border-width: 15%;
     padding: 1rem;
     transition: background 0.2s ease;
   }

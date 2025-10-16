@@ -141,11 +141,11 @@
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         flex: 1;
-        min-width: 200px;
-        max-width: 400px;
+        min-width: 0;
         height: fit-content;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
+        transition: flex 0.5s ease;
     }
     .schedule-section{
         background-color: rgba(48, 38, 38, 0.8);
@@ -154,11 +154,11 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: auto;
         flex: 2.5;
-        min-width: 200px;
-        max-width: 400px;
+        min-width: 0;
         height: fit-content;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
+        transition: flex 0.3s ease;
     }
 
     .posts-section{
@@ -168,11 +168,11 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: auto;
         flex: 1.5;
-        min-width: 200px;
-        max-width: 400px;
+        min-width: 0;
         height: fit-content;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
+        transition: flex 0.3s ease;
     }
 
     /* Adjust section widths based on expandedView state */
@@ -181,9 +181,12 @@
     }
     .main-content-flexbox.expanded-left .posts-section{
         flex: 0;
+        padding:0%
+        
     }
     .main-content-flexbox.expanded-left .schedule-section{
         flex: 0;
+        padding:0%
     }
 
     .main-content-flexbox.expanded-middle .schedule-section{
@@ -191,9 +194,11 @@
     }
     .main-content-flexbox.expanded-middle .posts-section{
         flex: 0;
+        padding:0%
     }
     .main-content-flexbox.expanded-middle .services-section{
         flex: 0;
+        padding:0%
     }
 
     .main-content-flexbox.expanded-right .posts-section{
@@ -201,9 +206,11 @@
     }
     .main-content-flexbox.expanded-right .schedule-section{
         flex: 0;
+        padding:0%
     }
     .main-content-flexbox.expanded-right .services-section{
         flex: 0;
+        padding:0%
     }
 
 

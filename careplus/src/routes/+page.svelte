@@ -182,12 +182,15 @@
             align-items: center;
             overflow-y: auto;
         }
-        .services-section, .schedule-section, .posts-section{
-            max-width: 90%;
+        .services-section{
+            display: none;
+        }
+        .schedule-section, .posts-section{
+            max-width: 100%;
             margin-bottom: 1rem;
         }
     }   
-    
+
     .section-resize{
         display: flex;
         justify-content: flex-end;

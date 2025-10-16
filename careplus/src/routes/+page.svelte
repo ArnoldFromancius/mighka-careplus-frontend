@@ -103,7 +103,9 @@
         height: 100%;
         width: auto;
     }   
-
+    .top-logo-icon img:hover{
+        scale: 1.2;
+    }
     .top-user-icon{
         font-size: 1rem;
         margin: 0;
@@ -117,6 +119,9 @@
         width: auto;
         border-radius: 50%;
         border: 2px solid antiquewhite;
+    }
+    .top-user-icon img:hover{
+        scale: 1.1;
     }
 
     /* Main content styles */
@@ -203,6 +208,10 @@
     .whatsapp-icon img{
         height: 100%;
         width: auto;
+        opacity: 0.8;
+    }
+    .whatsapp-icon img:hover{
+        opacity: 1;
     }
     
     .chat-icon{
@@ -216,7 +225,12 @@
     .chat-icon img{
         height: 100%;
         width: auto;
-    } 
+        opacity: 0.8;
+    }
+    .chat-icon img:hover{
+        opacity: 1;
+    }
+
     section{
         overflow: auto;
     }

@@ -1,5 +1,7 @@
 <script lang="ts">
-    let expandedView: 'left' | 'middle' | 'right' | null = null;   
+   import ServicesInfo from "$lib/components/ServicesInfo.svelte";  
+   
+   let expandedView: 'left' | 'middle' | 'right' | null = null;   
     
     function toggleView(view: 'left' | 'middle' | 'right') {
         expandedView = expandedView === view ? null : view;
@@ -17,14 +19,16 @@
             <div class="top-user-icon">
                 <img src="src/lib/assets/images/user.png" alt="user icon"/>
             </div>
-        </div>
-        
+        </div>      
     </header>
     <section>
         <div class="main-content-flexbox {expandedView ? `expanded-${expandedView}` : ''}">
             <div class="services-section">
                 <div class="section-resize">
                     <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('left')}/>
+                </div>
+                <div class="section-content">
+                    <ServicesInfo/>
                 </div>
             </div>
             <div class="schedule-section">
@@ -98,6 +102,7 @@
         padding-right: 1.5%;
         height: 2.8rem;          /* scales with font size / viewport */
         width: auto;
+        cursor: pointer;
     }
     .top-logo-icon img{
         height: 100%;
@@ -113,6 +118,7 @@
         padding-left: 5%;
         height: 2rem;          /* scales with font size / viewport */
         width: auto;
+        cursor: pointer;
     }
     .top-user-icon img{
         height: 100%;
@@ -131,10 +137,20 @@
         align-items: flex-start;
         gap: 1rem;
         padding: 1rem;
-        height: 100%;
-        overflow-y: auto;
+        height: 95%;
+        overflow-y: hidden;
         background-color:rgba(0, 0, 0, 0.665);
+        scroll-behavior: smooth;
     }
+    .section-content {
+        flex: 1;          /* fill remaining space */
+        overflow-y: auto; /* scrollable content */
+        height: 100%;
+        margin-top: 5%;
+        box-sizing: border-box;
+        background-color: rgba(28, 25, 25, 0.6);
+        scroll-behavior: smooth;
+     }
     .services-section{
         background-color: rgba(23, 59, 58, 0.8);
         border-radius: 10px;
@@ -142,17 +158,18 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         flex: 1;
         min-width: 0;
-        height: fit-content;
+        height: 100%;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
         transition: flex 0.5s ease;
+        overflow: hidden;
     }
     .schedule-section{
         background-color: rgba(48, 38, 38, 0.8);
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: auto;
+        overflow: hidden;
         flex: 2.5;
         min-width: 0;
         height: fit-content;
@@ -165,7 +182,7 @@
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: auto;
+        overflow: hidden;
         flex: 1.5;
         min-width: 0;
         height: fit-content;
@@ -228,7 +245,7 @@
         .main-content-flexbox{
             flex-direction: column;
             align-items: center;
-            overflow-y: auto;
+            overflow-y: hidden;
         }
         .services-section{
             display: none;
@@ -243,6 +260,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        flex-shrink: 0;
         cursor: pointer;
     }
     .section-resize img{
@@ -252,6 +270,12 @@
     }
     .section-resize img:hover{
         opacity: 1;
+    }
+    .section-content {
+        flex: 1;          /* fill remaining space */
+        overflow-y: auto; /* scrollable content */
+        padding: 1rem;
+        box-sizing: border-box;
     }
 
     /* Footer styles */
@@ -268,6 +292,7 @@
         padding-right: 1.5%;
         height: 2rem;          /* scales with font size / viewport */
         width: auto;
+        cursor: pointer;
     }
     .whatsapp-icon img{
         height: 100%;
@@ -285,6 +310,7 @@
         padding-right: 1.5%;
         height: 2rem;          /* scales with font size / viewport */
         width: auto;
+        cursor: pointer;
     }
     .chat-icon img{
         height: 100%;

@@ -1,3 +1,11 @@
+<script>
+    let expandedView = null; // can be 'left', 'center', or 'right';   
+    
+    function expandView(section) {
+        expandedView = expandedView === section ? null : section;
+    }
+
+</script>
 
 <main>
     <header>
@@ -13,6 +21,23 @@
         
     </header>
     <section>
+        <div class="main-content-flexbox">
+            <div class="services-section">
+                <div class="section-resize">
+                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon"/>
+                </div>
+            </div>
+            <div class="schedule-section">
+                <div class="section-resize">
+                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon"/>
+                </div>
+            </div>
+            <div class="posts-section">
+                <div class="section-resize">
+                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon"/>
+                </div>
+            </div>
+        </div>
 
     </section>
     <footer>
@@ -30,12 +55,7 @@
 
 
 <style lang="css">
-    body{
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-    }
-    
+       
     main{
         display: grid;
         grid-template-rows: auto 1fr auto;
@@ -48,6 +68,7 @@
         background-repeat: no-repeat;
     }
 
+    /* Header styles */
     header{
         background-color: #1e1d1db6;
         color: antiquewhite;
@@ -98,6 +119,73 @@
         border: 2px solid antiquewhite;
     }
 
+    /* Main content styles */
+    .main-content-flexbox{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        height: 100%;
+        overflow-y: auto;
+        background-color:rgba(0, 0, 0, 0.665);
+    }
+    .services-section{
+        background-color: rgba(23, 59, 58, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        min-width: 200px;
+        max-width: 400px;
+        height: fit-content;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+    }
+    .schedule-section{
+        background-color: rgba(48, 38, 38, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        flex: 2.5;
+        min-width: 200px;
+        max-width: 400px;
+        height: fit-content;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+    }
+
+    .posts-section{
+        background-color: rgba(44, 11, 33, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        flex: 1.5;
+        min-width: 200px;
+        max-width: 400px;
+        height: fit-content;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+    }
+
+    .section-resize{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+    .section-resize img{
+        height: 1.3rem;
+        width: auto;
+        opacity: 0.7;
+    }
+    .section-resize img:hover{
+        opacity: 1;
+    }
+
+    /* Footer styles */
     .footer-flexbox{
         display: flex;
         justify-content: space-between;

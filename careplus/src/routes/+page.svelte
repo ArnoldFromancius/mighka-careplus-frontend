@@ -49,7 +49,7 @@
             <div class="whatsapp-icon">
                 <img src="src/lib/assets/images/whatsapp.png" alt="whatsapp icon"/>
             </div>
-            <h4 class="footer-heading">Login</h4>
+            <h4 class="footer-heading">Guest</h4>
             <div class="chat-icon">
                 <img src="src/lib/assets/images/chat.png" alt="chat icon"/>
             </div>

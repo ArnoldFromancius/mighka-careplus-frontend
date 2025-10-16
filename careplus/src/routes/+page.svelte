@@ -204,6 +204,7 @@
         height: 100%;
         width: auto;
     }
+    
     .chat-icon{
         font-size: 2rem;
         margin: 0;

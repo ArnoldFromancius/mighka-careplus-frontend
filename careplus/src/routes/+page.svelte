@@ -160,7 +160,6 @@
         align-items: center;     /* vertical centering */
         transition: flex 0.3s ease;
     }
-
     .posts-section{
         background-color: rgba(44, 11, 33, 0.8);
         border-radius: 10px;
@@ -182,7 +181,7 @@
     .main-content-flexbox.expanded-left .posts-section{
         flex: 0;
         padding:0%
-        
+
     }
     .main-content-flexbox.expanded-left .schedule-section{
         flex: 0;
@@ -195,11 +194,17 @@
     .main-content-flexbox.expanded-middle .posts-section{
         flex: 0;
         padding:0%
+    
+
     }
     .main-content-flexbox.expanded-middle .services-section{
         flex: 0;
         padding:0%
     }
+    .main-content-flexbox.expanded-middle .services-section .section-resize {
+    display: none;
+    }
+
 
     .main-content-flexbox.expanded-right .posts-section{
         flex: 4;
@@ -212,6 +217,10 @@
         flex: 0;
         padding:0%
     }
+    .main-content-flexbox.expanded-right .services-section .section-resize {
+    display: none;
+    }
+
 
 
     /*Mobile device adjustments*/

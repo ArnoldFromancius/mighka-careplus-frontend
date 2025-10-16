@@ -175,6 +175,19 @@
         align-items: center;     /* vertical centering */
     }
 
+    /*Mobile device adjustments*/
+    @media(max-width: 768px){
+        .main-content-flexbox{
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .services-section, .schedule-section, .posts-section{
+            max-width: 90%;
+            margin-bottom: 1rem;
+        }
+    }   
+    
     .section-resize{
         display: flex;
         justify-content: flex-end;

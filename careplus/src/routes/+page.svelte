@@ -282,6 +282,10 @@
             flex: 4;
             min-width: 100%;
         }
+            .main-content-flexbox.expanded-middle .section-content{
+            width: 95%;
+            margin: 0 auto;
+         }
         .main-content-flexbox.expanded-middle .posts-section{
             flex: 0;
             padding: 0%;
@@ -301,6 +305,10 @@
             flex: 4;
             min-height: 100%;
         }
+            .main-content-flexbox.expanded-right .section-content{
+            width: 95%;
+            margin: 0 auto;
+         }
         .main-content-flexbox.expanded-right .schedule-section{
             flex: 0;
             padding:0%;

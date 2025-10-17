@@ -4,8 +4,8 @@
     { name: "Brick Laying", desc: "Quick and accurate fault detection for all vehicle types." },
     { name: "House Wiring", desc: "High-quality oil replacement to keep your engine healthy." },
     { name: "Solar Installation", desc: "Professional wheel balancing and alignment services." },
-    { name: "Plumbing Maintenance", desc: "Ensure your vehicle’s safety with detailed brake checks." },
-    { name: "Pavers Installation", desc: "We stock trusted brands for long-lasting performance." },
+    { name: "Plumbing", desc: "Ensure your vehicle’s safety with detailed brake checks." },
+    { name: "Paver Installation", desc: "We stock trusted brands for long-lasting performance." },
   ];
 </script>
 

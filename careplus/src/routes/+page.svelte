@@ -200,6 +200,11 @@
     /* Adjust section widths based on expandedView state */
     .main-content-flexbox.expanded-left .services-section{
         flex: 4;
+        min-height: 100%;
+    }
+    .main-content-flexbox.expanded-left .section-content{
+        width: 70%;
+        margin: 0 auto;
     }
     .main-content-flexbox.expanded-left .posts-section{
         flex: 0;
@@ -213,7 +218,11 @@
 
     .main-content-flexbox.expanded-middle .schedule-section{
         flex: 4;
-        min-width: 100%;
+        min-height: 100%;
+    }
+    .main-content-flexbox.expanded-middle .section-content{
+        width: 80%;
+        margin: 0 auto;
     }
     .main-content-flexbox.expanded-middle .posts-section{
         flex: 0;
@@ -233,6 +242,10 @@
     .main-content-flexbox.expanded-right .posts-section{
         flex: 4;
         min-height: 100%;
+    }
+    .main-content-flexbox.expanded-right .section-content{
+        width: 70%;
+        margin: 0 auto;
     }
     .main-content-flexbox.expanded-right .schedule-section{
         flex: 0;

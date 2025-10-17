@@ -176,6 +176,7 @@
         overflow: hidden;
         flex: 2.5;
         min-width: 0;
+        min-height: 80%;
         height: 100%;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
@@ -189,6 +190,7 @@
         overflow: hidden;
         flex: 1.5;
         min-width: 0;
+        min-height: 40%;
         height: 100%;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
@@ -234,7 +236,7 @@
     }
     .main-content-flexbox.expanded-right .schedule-section{
         flex: 0;
-        padding:0%
+        padding:0%;
     }
     .main-content-flexbox.expanded-right .services-section{
         flex: 0;
@@ -251,7 +253,8 @@
         .main-content-flexbox{
             flex-direction: column;
             align-items: center;
-            overflow-y: hidden;
+            height: 100%;
+            overflow-y: auto;
         }
         .services-section{
             display: none;
@@ -259,6 +262,44 @@
         .schedule-section, .posts-section{
             max-width: 100%;
             margin-bottom: 1rem;
+        }
+
+        /* Adjust section heights when expanded on mobile */
+        .main-content-flexbox.expanded-middle .schedule-section{
+            flex: 4;
+            min-width: 100%;
+        }
+        .main-content-flexbox.expanded-middle .posts-section{
+            flex: 0;
+            padding: 0%;
+            display:none;
+        }
+        .main-content-flexbox.expanded-middle .services-section{
+            flex: 0;
+            padding: 0%;
+            display: none;
+        }
+        .main-content-flexbox.expanded-middle .services-section .section-resize {
+            display: none;
+        }
+
+
+        .main-content-flexbox.expanded-right .posts-section{
+            flex: 4;
+            min-height: 100%;
+        }
+        .main-content-flexbox.expanded-right .schedule-section{
+            flex: 0;
+            padding:0%;
+            display: none;
+        }
+        .main-content-flexbox.expanded-right .services-section{
+            flex: 0;
+            padding:0%;
+            display: none;
+        }
+        .main-content-flexbox.expanded-right .services-section .section-resize {
+            display: none;
         }
     }   
 
@@ -290,7 +331,7 @@
         margin-top: 1%;
         box-sizing: border-box;
     }
-
+    
     /* Footer styles */
     .footer-flexbox{
         display: flex;

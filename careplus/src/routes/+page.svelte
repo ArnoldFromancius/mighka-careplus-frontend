@@ -176,7 +176,7 @@
         overflow: hidden;
         flex: 2.5;
         min-width: 0;
-        height: fit-content;
+        height: 100%;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
         transition: flex 0.3s ease;
@@ -189,7 +189,7 @@
         overflow: hidden;
         flex: 1.5;
         min-width: 0;
-        height: fit-content;
+        height: 100%;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */
         transition: flex 0.3s ease;

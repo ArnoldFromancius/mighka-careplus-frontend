@@ -262,7 +262,7 @@
 
 
     /*Mobile device adjustments*/
-    @media(max-width: 900px){
+    @media(max-width: 1024px){
         .main-content-flexbox{
             flex-direction: column;
             align-items: center;

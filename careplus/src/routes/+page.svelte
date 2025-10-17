@@ -264,6 +264,9 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding: 0%;
+        margin: 0%;
+        height: 15px;
         flex-shrink: 0;
         cursor: pointer;
     }
@@ -271,6 +274,8 @@
         height: 1.3rem;
         width: auto;
         opacity: 0.7;
+        margin: 0;
+        padding: 0%;
     }
     .section-resize img:hover{
         opacity: 1;
@@ -279,6 +284,8 @@
         flex: 1;          /* fill remaining space */
         overflow-y: auto; /* scrollable content */
         padding: 1rem;
+        padding-top: 0%;
+        margin-top: 1%;
         box-sizing: border-box;
     }
 

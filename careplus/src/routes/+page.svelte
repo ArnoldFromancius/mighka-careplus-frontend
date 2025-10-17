@@ -211,6 +211,7 @@
 
     .main-content-flexbox.expanded-middle .schedule-section{
         flex: 4;
+        min-width: 100%;
     }
     .main-content-flexbox.expanded-middle .posts-section{
         flex: 0;
@@ -229,6 +230,7 @@
 
     .main-content-flexbox.expanded-right .posts-section{
         flex: 4;
+        min-height: 100%;
     }
     .main-content-flexbox.expanded-right .schedule-section{
         flex: 0;

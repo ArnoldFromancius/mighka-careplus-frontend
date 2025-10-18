@@ -155,6 +155,7 @@
         height: 95%;
         overflow-y: hidden;
         background-color:rgba(0, 0, 0, 0.665);
+        transition: all 0.4s ease-in-out;
         scroll-behavior: smooth;
     }
     .section-content {
@@ -164,6 +165,7 @@
         margin-top: 5%;
         box-sizing: border-box;
         background-color: rgba(28, 25, 25, 0.6);
+        transition: flex 0.4s ease-in-out, opacity 0.7s ease;
         scroll-behavior: smooth;
      }
     .services-section{

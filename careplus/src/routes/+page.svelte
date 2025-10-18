@@ -366,6 +366,7 @@
             align-items: center;
             height: 100%;
             overflow-y: auto;
+            overflow-x: hidden;
         }
         .services-section{
             display: none;

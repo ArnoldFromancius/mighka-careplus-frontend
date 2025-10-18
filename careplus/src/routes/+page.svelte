@@ -14,7 +14,9 @@
     <header>
         <div class="header-flexbox">
             <div class="top-logo-icon">
-                <img src="src/lib/assets/images/logo.png" alt="logo"/>
+                <a href="/" aria-label="Go to main page">
+                     <img src="src/lib/assets/images/logo.png" alt="logo"/>
+                </a>
             </div>
             <h1 class="main-heading">Mighka CarePlus+</h1>
             <div class="top-user-icon">
@@ -51,7 +53,14 @@
     <footer>
         <div class="footer-flexbox">
             <div class="whatsapp-icon">
-                <img src="src/lib/assets/images/whatsapp.png" alt="whatsapp icon"/>
+                <a 
+                    href="https://wa.me/260776203534" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Chat on WhatsApp"
+                 >
+                                <img src="src/lib/assets/images/whatsapp.png" alt="whatsapp icon"/>
+            </a>
             </div>
             <h4 class="footer-heading">Guest</h4>
             <div class="chat-icon">

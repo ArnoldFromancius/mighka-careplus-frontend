@@ -223,7 +223,7 @@
     }
     .user-section{
         display: none;
-        background-color: rgba(11, 25, 44, 0.8);
+        background-color: rgba(1, 7, 16, 0.729);
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -238,7 +238,7 @@
     }
     .chat-section{
         display: none;
-        background-color: rgba(44, 11, 33, 0.8);
+        background-color: rgba(27, 2, 1, 0.637);
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

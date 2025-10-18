@@ -2,9 +2,9 @@
    import ServicesInfo from "$lib/components/ServicesInfo.svelte";  
    import Posts from "$lib/components/Posts.svelte";
 
-   let expandedView: 'left' | 'middle' | 'right' | null = null;   
-    
-    function toggleView(view: 'left' | 'middle' | 'right') {
+   let expandedView: 'left' | 'middle' | 'right' | 'user' | 'chat' | null = null;
+
+    function toggleView(view: 'left' | 'middle' | 'right' | 'user' | 'chat') {
         expandedView = expandedView === view ? null : view;
     }
 
@@ -22,7 +22,7 @@
             </div>
             <h1 class="main-heading">Mighka CarePlus+</h1>
             <div class="top-user-icon">
-                <img src="src/lib/assets/images/user.png" alt="user icon"/>
+                <img src="src/lib/assets/images/user.png" alt="user icon" on:click={() => toggleView('user')}/>
             </div>
         </div>      
     </header>
@@ -49,6 +49,18 @@
                     <Posts/>
                 </div>
             </div>
+
+            <div class="user-section">
+                <div class="section-content">
+                    <p>User Information Panel</p>
+                </div>
+            </div>
+
+            <div class="chat-section">
+                <div class="section-content">
+                    <p>Chat Panel</p>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -66,7 +78,7 @@
             </div>
             <h4 class="footer-heading">Guest</h4>
             <div class="chat-icon">
-                <img src="src/lib/assets/images/chat.png" alt="chat icon"/>
+                <img src="src/lib/assets/images/chat.png" alt="chat icon" on:click={() => toggleView('chat')}/>
             </div>
         </div> 
     </footer>
@@ -209,8 +221,40 @@
         align-items: center;     /* vertical centering */
         transition: flex 0.3s ease;
     }
+    .user-section{
+        display: none;
+        background-color: rgba(11, 25, 44, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        flex: 4;
+        min-width: 0;
+        min-height: 40%;
+        height: 100%;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+        transition: flex 0.3s ease;
+    }
+    .chat-section{
+        display: none;
+        background-color: rgba(44, 11, 33, 0.8);
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        flex: 1.5;
+        min-width: 0;
+        min-height: 40%;
+        height: 100%;
+        justify-content: center; /* horizontal centering */
+        align-items: center;     /* vertical centering */
+        transition: flex 0.3s ease;
+    }
 
     /* Adjust section widths based on expandedView state */
+
+    /* Left panel expanded styles */
     .main-content-flexbox.expanded-left .services-section{
         flex: 4;
         min-height: 100%;
@@ -228,7 +272,7 @@
         flex: 0;
         padding:0%
     }
-
+    /* Middle panel expanded styles */
     .main-content-flexbox.expanded-middle .schedule-section{
         flex: 4;
         min-height: 100%;
@@ -250,8 +294,7 @@
     .main-content-flexbox.expanded-middle .services-section .section-resize {
     display: none;
     }
-
-
+    /* Right panel expanded styles */
     .main-content-flexbox.expanded-right .posts-section{
         flex: 4;
         min-height: 100%;
@@ -271,7 +314,49 @@
     .main-content-flexbox.expanded-right .services-section .section-resize {
     display: none;
     }
-
+    /* User panel expanded styles */
+    .main-content-flexbox.expanded-user .user-section{
+        display: block;
+        flex: 4;
+        min-height: 100%;
+    }
+    .main-content-flexbox.expanded-user .section-content{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .main-content-flexbox.expanded-user .schedule-section{
+       display: none;
+    }
+    .main-content-flexbox.expanded-user .posts-section{
+       display: none;
+    }
+    .main-content-flexbox.expanded-user .services-section{
+       display: none;
+    }
+    .main-content-flexbox.expanded-user .services-section .section-resize {
+       display: none;
+    }
+    /* Chat panel expanded styles */
+    .main-content-flexbox.expanded-chat .chat-section{
+        display: block;
+        flex: 4;
+        min-height: 100%;
+    }
+    .main-content-flexbox.expanded-chat .section-content{
+       display: none;
+    }
+    .main-content-flexbox.expanded-chat .posts-section{
+        display: none;
+    }
+    .main-content-flexbox.expanded-chat .schedule-section{
+        display: none;
+    }
+    .main-content-flexbox.expanded-chat .services-section{
+        display: none;
+    }
+    .main-content-flexbox.expanded-chat .services-section .section-resize {
+    display: none;
+    }
 
 
     /*Mobile device adjustments*/

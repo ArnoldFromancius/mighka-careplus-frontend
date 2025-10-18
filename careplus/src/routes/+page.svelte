@@ -58,7 +58,7 @@
 
             <div class="chat-section">
                 <div class="section-content">
-                    <p>Chat Panel</p>
+                    <p>Chat Information Panel</p>
                 </div>
             </div>
         </div>
@@ -243,7 +243,7 @@
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        flex: 1.5;
+        flex: 4;
         min-width: 0;
         min-height: 40%;
         height: 100%;
@@ -381,7 +381,7 @@
             flex: 4;
             min-width: 100%;
         }
-            .main-content-flexbox.expanded-middle .section-content{
+        .main-content-flexbox.expanded-middle .section-content{
             width: 95%;
             margin: 0 auto;
          }
@@ -404,7 +404,7 @@
             flex: 4;
             min-height: 100%;
         }
-            .main-content-flexbox.expanded-right .section-content{
+        .main-content-flexbox.expanded-right .section-content{
             width: 95%;
             margin: 0 auto;
          }
@@ -426,15 +426,19 @@
             flex: 4;
             min-height: 100%;
         }
-            .main-content-flexbox.expanded-right .section-content{
+        .main-content-flexbox.expanded-right .section-content{
             width: 95%;
             margin: 0 auto;
          }
          
-         .main-content-flexbox.expanded-user .user-section{
-            width: 95%;
-            margin: 0 auto;
+        .main-content-flexbox.expanded-user .user-section{
+            flex: 4;
+            min-height: 100%;
         }
+        .main-content-flexbox.expanded-user .section-content{
+            width: 100%;
+            margin: 0 auto;
+         }
         .main-content-flexbox.expanded-user .schedule-section{
             display: none;
         }
@@ -446,9 +450,13 @@
         }
 
         .main-content-flexbox.expanded-chat .chat-section{
+            flex: 4;
+            min-height: 100%;
+        }
+        .main-content-flexbox.expanded-chat .section-content{
             width: 95%;
             margin: 0 auto;
-        }
+         }
         .main-content-flexbox.expanded-chat .schedule-section {
             display: none;
         }

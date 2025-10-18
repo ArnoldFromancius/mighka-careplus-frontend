@@ -8,15 +8,17 @@
         expandedView = expandedView === view ? null : view;
     }
 
+    function resetView() {
+        expandedView = null;
+    }
+
 </script>
 
 <main>
     <header>
         <div class="header-flexbox">
             <div class="top-logo-icon">
-                <a href="/" aria-label="Go to main page">
-                     <img src="src/lib/assets/images/logo.png" alt="logo"/>
-                </a>
+                <img src="src/lib/assets/images/logo.png" alt="logo" on:click={resetView}/>
             </div>
             <h1 class="main-heading">Mighka CarePlus+</h1>
             <div class="top-user-icon">

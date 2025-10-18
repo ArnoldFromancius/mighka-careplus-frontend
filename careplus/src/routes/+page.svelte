@@ -52,13 +52,13 @@
 
             <div class="user-section">
                 <div class="section-content">
-                    <p>User Information Panel</p>
+                    <h2>User Information Panel</h2>
                 </div>
             </div>
 
             <div class="chat-section">
                 <div class="section-content">
-                    <p>Chat Information Panel</p>
+                    <h2>Chat Information Panel</h2>
                 </div>
             </div>
         </div>
@@ -224,6 +224,7 @@
     .user-section{
         display: none;
         background-color: rgba(1, 7, 16, 0.729);
+        color:cornflowerblue;
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -239,6 +240,7 @@
     .chat-section{
         display: none;
         background-color: rgba(27, 2, 1, 0.637);
+        color: tomato;
         border-radius: 10px;
         padding: 1rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -343,7 +345,8 @@
         min-height: 100%;
     }
     .main-content-flexbox.expanded-chat .section-content{
-       display: none;
+       width: 80%;
+       margin: 0 auto;
     }
     .main-content-flexbox.expanded-chat .posts-section{
         display: none;

@@ -52,13 +52,13 @@
 
             <div class="user-section">
                 <div class="section-content">
-                    <h2>User Information Panel</h2>
+                    <h3>User Information Panel</h3>
                 </div>
             </div>
 
             <div class="chat-section">
                 <div class="section-content">
-                    <h2>Chat Information Panel</h2>
+                    <h3>Chat Information Panel</h3>
                 </div>
             </div>
         </div>

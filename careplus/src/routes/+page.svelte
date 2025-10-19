@@ -424,15 +424,6 @@
         .main-content-flexbox.expanded-right .services-section .section-resize {
             display: none;
         }
-
-        .main-content-flexbox.expanded-right .posts-section{
-            flex: 4;
-            min-height: 100%;
-        }
-        .main-content-flexbox.expanded-right .section-content{
-            width: 95%;
-            margin: 0 auto;
-         }
          
         .main-content-flexbox.expanded-user .user-section{
             flex: 4;
@@ -457,7 +448,7 @@
             min-height: 100%;
         }
         .main-content-flexbox.expanded-chat .section-content{
-            width: 95%;
+            width: 100%;
             margin: 0 auto;
          }
         .main-content-flexbox.expanded-chat .schedule-section {

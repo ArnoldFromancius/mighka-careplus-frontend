@@ -67,7 +67,7 @@
 		];
 		closeModal();
 	}
-    
+
 </script>
 
 <section class="schedule-section">
@@ -152,6 +152,7 @@
 
 	.schedule-header {
 		display: flex;
+		color: #c77800;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 1rem;

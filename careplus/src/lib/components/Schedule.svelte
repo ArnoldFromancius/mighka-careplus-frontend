@@ -192,7 +192,7 @@
 		border-bottom: 2px solid transparent;
 		font-weight: 500;
 		font-size: 0.9rem;
-		color: #333;
+		color: #727272;
 	}
 	.schedule-tabs button.active {
 		color: #0077b6;

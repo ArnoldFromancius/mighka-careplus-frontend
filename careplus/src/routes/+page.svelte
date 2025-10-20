@@ -1,6 +1,7 @@
 <script lang="ts">
    import ServicesInfo from "$lib/components/ServicesInfo.svelte";  
    import Posts from "$lib/components/Posts.svelte";
+   import Schedule from "$lib/components/Schedule.svelte";
 
    let expandedView: 'left' | 'middle' | 'right' | 'user' | 'chat' | null = null;
 
@@ -39,6 +40,9 @@
             <div class="schedule-section">
                 <div class="section-resize">
                     <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('middle')}/>
+                </div>
+                <div class="section-content">
+                    <Schedule/>
                 </div>
             </div>
             <div class="posts-section">

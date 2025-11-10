@@ -1,34 +1,46 @@
 import { fail, redirect } from '@sveltejs/kit';
-import Client from '$lib/models/client.js'; // or your actual model
 
 export const actions = {
   login: async ({ request, cookies }) => {
-    const form = await request.formData();
-    const email = form.get('email');
-    const password = form.get('password');
+    try {
+      // 1️⃣ Get form data
+      const form = await request.formData();
+      const email = form.get('email');
+      const password = form.get('password');
 
-    // 1. Lookup user in MongoDB
-    const user = await Client.findOne({ email });
+      if (!email || !password) {
+        return fail(400, { error: 'Email and password are required' });
+      }
 
-    if (!user) {
-      return fail(400, { error: 'User not found' });
+      // 2️⃣ Call backend API
+      const res = await fetch('http://localhost:3000/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await res.json();
+
+      // 3️⃣ Handle login failure
+      if (!res.ok) {
+        return fail(400, { error: data.error || 'Login failed' });
+      }
+
+      // 4️⃣ Save session cookie returned from backend
+      cookies.set('session', data.session, {
+        path: '/',
+        httpOnly: true,
+        sameSite: 'strict',
+        secure: false // set true if HTTPS
+      });
+
+      // 5️⃣ Redirect to main app
+      throw redirect(302, '/app');
+
+    } catch (err) {
+      console.error('Login error:', err);
+      return fail(500, { error: 'Server error during login' });
     }
-
-    // 2. Validate password (plain here; later use hashing)
-    if (user.password !== password) {
-      return fail(400, { error: 'Invalid credentials' });
-    }
-
-    // 3. Set session cookie
-    cookies.set('session', user._id.toString(), {
-      path: '/',
-      httpOnly: true,
-      sameSite: 'strict',
-      secure: false // true if HTTPS
-    });
-
-    // 4. Redirect to main app
-    throw redirect(302, '/app');
   }
 };
 

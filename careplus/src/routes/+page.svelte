@@ -22,7 +22,7 @@
         <br/>
         <button on:click={login}>Sign In</button>
         <p>or</p>
-        <a href="">sign in as a guest.</a>
+        <a href="/app?guest=true">sign in as guest.</a>
         <div class="whatsapp-icon">
             <a 
               href="https://wa.me/260776203534" 
@@ -40,6 +40,7 @@
 </main>
 
 <style lang="css">
+  
   main {
     margin: 0;
     padding: 0;
@@ -89,7 +90,6 @@
     font-size: 16px;
     text-align: center;
   }
-
   button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -101,9 +101,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-
   a{
     color:chocolate;
+  }
+  a:hover{
+    color:darkorange;
   }
 
   .whatsapp-icon{

@@ -1,17 +1,17 @@
+// src/routes/app/+layout.server.js
 import { redirect } from '@sveltejs/kit';
 
-export const load = async ({ cookies }) => {
-  const session = cookies.get('session');
+export const load = async ({ cookies, url }) => {
+	let user = cookies.get('user');
 
-  // If no session cookie, redirect to login
-  if (!session) {
-    throw redirect(302, '/');
-  }
+	// ✅ Allow guest users via ?guest=true
+	if (url.searchParams.get('guest') === 'true') {
+		return { user: { role: 'guest', name: 'Guest User' } };
+	}
 
-  // Optionally, you can fetch user info from DB
-  // const user = await Client.findById(session);
-  // return { user };
+	if (!user) {
+		throw redirect(303, '/');
+	}
 
-  return { userId: session }; // minimal info for the layout or pages
+	return { user: JSON.parse(user) };
 };
-

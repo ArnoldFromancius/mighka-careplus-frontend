@@ -62,18 +62,18 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
+    padding: 0.5%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgba(7, 15, 24, 0.437);
-    border-radius: 8px;
-    max-width: 1000px;
+    border-radius: 0.5%;
+    max-width: 70%;
     margin: auto;  
     color:antiquewhite;
   }
   .login_overlay {
     background-color: rgba(2, 42, 47, 0.5); /* semi-transparent overlay */
     border-radius: 10px;
-    padding: 30px;
+    padding: 7%;
   }
 
   img {
@@ -100,6 +100,10 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+
+  a{
+    color:chocolate;
   }
 
   .whatsapp-icon{

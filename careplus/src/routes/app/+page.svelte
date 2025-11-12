@@ -2,10 +2,20 @@
    import ServicesInfo from "$lib/components/ServicesInfo.svelte";  
    import Posts from "$lib/components/Posts.svelte";
    import Schedule from "$lib/components/Schedule.svelte";
+   import { goto } from "$app/navigation";
+
+   export let data;
+   const user = data.user;
+   let isGuest = user?.role === 'guest';
 
    let expandedView: 'left' | 'middle' | 'right' | 'user' | 'chat' | null = null;
 
     function toggleView(view: 'left' | 'middle' | 'right' | 'user' | 'chat') {
+        // If guest tries to open the user panel, redirect to login
+		if (isGuest && view === 'user') {
+			goto('/logout');
+			return;
+		}
         expandedView = expandedView === view ? null : view;
     }
 

@@ -474,6 +474,10 @@
         .main-content-flexbox.expanded-chat .posts-section {
             display: none;
         }
+
+        footer{
+            display: none;
+        }
     }   
 
     .section-resize{

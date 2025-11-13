@@ -15,7 +15,7 @@
   <div class="overlay">
     <div class="login-page">
       <div class="login_overlay">
-        <img src="/static/assets/images/logo.png" alt="CarePlus Logo" width="250" />
+        <img src="/assets/images/logo.png" alt="CarePlus Logo" width="250" />
         <h1>Login</h1>
         <input bind:value={email} placeholder="Email" />
         <br>
@@ -31,7 +31,7 @@
               rel="noopener noreferrer" 
               aria-label="Chat on WhatsApp"
             >
-              <img src="/static/assets/images/whatsapp.png" alt="whatsapp icon"/>
+              <img src="/assets/images/whatsapp.png" alt="whatsapp icon"/>
             
             </a>
           </div>

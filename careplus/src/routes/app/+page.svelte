@@ -29,11 +29,11 @@
     <header>
         <div class="header-flexbox">
             <div class="top-logo-icon">
-                <img src="/static/assets/images/logo.png" alt="logo" on:click={resetView}/>
+                <img src="/assets/images/logo.png" alt="logo" on:click={resetView}/>
             </div>
             <h1 class="main-heading">Mighka CarePlus+</h1>
             <div class="top-user-icon">
-                <img src="/static/assets/images/user.png" alt="user icon" on:click={() => toggleView('user')}/>
+                <img src="/assets/images/user.png" alt="user icon" on:click={() => toggleView('user')}/>
             </div>
         </div>      
     </header>
@@ -41,7 +41,7 @@
         <div class="main-content-flexbox {expandedView ? `expanded-${expandedView}` : ''}">
             <div class="services-section">
                 <div class="section-resize">
-                    <img src="src/lib/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('left')}/>
+                    <img src="/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('left')}/>
                 </div>
                 <div class="section-content">
                     <ServicesInfo/>
@@ -49,7 +49,7 @@
             </div>
             <div class="schedule-section">
                 <div class="section-resize">
-                    <img src="/static/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('middle')}/>
+                    <img src="/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('middle')}/>
                 </div>
                 <div class="section-content">
                     <Schedule/>
@@ -57,7 +57,7 @@
             </div>
             <div class="posts-section">
                 <div class="section-resize">
-                    <img src="/static/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('right')}/>
+                    <img src="/assets/images/resize.png" alt="expand/collapse icon" on:click={() => toggleView('right')}/>
                 </div>
                 <div class="section-content">
                     <Posts/>
@@ -87,12 +87,12 @@
                     rel="noopener noreferrer" 
                     aria-label="Chat on WhatsApp"
                  >
-                                <img src="/static/assets/images/whatsapp.png" alt="whatsapp icon"/>
+                                <img src="/assets/images/whatsapp.png" alt="whatsapp icon"/>
             </a>
             </div>
             <h4 class="footer-heading">Guest</h4>
             <div class="chat-icon">
-                <img src="/static/assets/images/chat.png" alt="chat icon" on:click={() => toggleView('chat')}/>
+                <img src="/assets/images/chat.png" alt="chat icon" on:click={() => toggleView('chat')}/>
             </div>
         </div> 
     </footer>

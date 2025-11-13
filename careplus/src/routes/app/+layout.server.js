@@ -4,7 +4,7 @@ import { redirect } from '@sveltejs/kit';
 export const load = async ({ cookies, url }) => {
 	let user = cookies.get('user');
 
-	// ✅ Allow guest users via ?guest=true
+	//Allow guest users via ?guest=true
 	if (url.searchParams.get('guest') === 'true') {
 		return { user: { role: 'guest', name: 'Guest User' } };
 	}

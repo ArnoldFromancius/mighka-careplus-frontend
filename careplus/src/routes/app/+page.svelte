@@ -107,7 +107,7 @@
         overflow: hidden;
         height: 100vh;
         text-align: center;
-        background-image: url("src/lib/assets/images/banner.jpg");
+        background-image: url("/assets/images/banner.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

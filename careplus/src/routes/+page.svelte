@@ -139,6 +139,11 @@
       width: 100%;
       height: 90vh;
     }
+    .whatsapp-icon{
+        font-size: 2rem;
+        height: 2rem; 
+        position: fixed;         /* scales with font size / viewport */
+    }
   }
 
 </style>

@@ -138,13 +138,11 @@
     } 
     .login_overlay {
       width: 100%;
-      height: 80vh;
+      height: 90vh;
       position: relative;
     }
     .whatsapp-icon{
-      position: absolute;
-	    bottom: 3%;
-	    left: -75%;
+      display: none;
     }
     
   }

@@ -140,11 +140,11 @@
     }
     .login-page {
       max-width: 100%;
-      height: 95vh;
+      height: 100vh;
     } 
     .login_overlay {
       width: 100%;
-      height: 90vh;
+      height: 100%;
       overflow-y: auto;
       position: relative;
     }

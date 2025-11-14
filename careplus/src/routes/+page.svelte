@@ -81,9 +81,7 @@
     padding-bottom: 8.5%;
   }
 
-  img {
-    margin-bottom: 20px;
-  }
+  
   input {
     margin: 10px 0;
     padding: 10px;

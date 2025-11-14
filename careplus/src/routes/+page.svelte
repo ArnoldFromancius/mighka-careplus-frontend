@@ -134,6 +134,7 @@
   @media(max-width: 1024px){
     main{
       height: 100vh;
+      overflow: hidden;
     }
     .login-page {
       max-width: 100%;
@@ -143,7 +144,6 @@
       width: 100%;
       height: 90vh;
       position: relative;
-      overflow: hidden;
     }
     .whatsapp-icon{
       display: none;

@@ -26,6 +26,22 @@
 			time: '3:30 PM',
 			status: 'complete',
 			technician: 'T. Zulu'
+		},
+		{
+			id: 4,
+			title: 'Electrical Maintenance',
+			date: 'Tue, Oct 15',
+			time: '3:30 PM',
+			status: 'inprogress',
+			technician: 'T. Zulu'
+		},
+		{
+			id: 5,
+			title: 'Electrical Maintenance',
+			date: 'Tue, Oct 15',
+			time: '3:30 PM',
+			status: 'complete',
+			technician: 'T. Zulu'
 		}
 	];
 
@@ -147,7 +163,7 @@
 		flex-direction: column;
 		height: 100%;
 		padding: 1rem;
-		overflow-y: auto;
+		overflow-y: hidden;
 	}
 
 	.schedule-header {
@@ -204,6 +220,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		overflow-y: auto;
 	}
 
 	.schedule-item {

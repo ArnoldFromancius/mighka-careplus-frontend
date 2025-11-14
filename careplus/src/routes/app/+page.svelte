@@ -223,6 +223,9 @@
         align-items: center;     /* vertical centering */
         transition: flex 0.3s ease;
     }
+    .schedule-section .section-content{
+        overflow-y: hidden;
+    }
     .posts-section{
         background-color: rgba(44, 11, 33, 0.8);
         border-radius: 10px;

@@ -53,6 +53,7 @@
     background-position: center;
     background-repeat: no-repeat;
     color: white;
+    position: relative;
   }
   .overlay {
     background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
@@ -117,9 +118,9 @@
         height: 2rem;          /* scales with font size / viewport */
         width: auto;
         cursor: pointer;
-        position: fixed;
-	    	bottom: 20px;
-	    	right: 20px;
+        position: absolute;
+	    	bottom: 5%;
+	    	right: 1%;
     }
     .whatsapp-icon img{
         height: 100%;
@@ -133,17 +134,13 @@
   @media(max-width: 1024px){
     .login-page {
       max-width: 100%;
-      height: 100vh;
+      height: 95vh;
     } 
     .login_overlay {
       width: 100%;
-      height: 90vh;
+      height: 80vh;
     }
-    .whatsapp-icon{
-        font-size: 2rem;
-        height: 2rem; 
-        position: fixed;         /* scales with font size / viewport */
-    }
+    
   }
 
 </style>

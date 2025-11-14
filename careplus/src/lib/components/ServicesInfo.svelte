@@ -17,6 +17,7 @@
         <h3>{service.name}</h3>
         <p>{service.desc}</p>
       </li>
+      <br>
     {/each}
   </ul>
 </div>
@@ -39,7 +40,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
   }
 
   .services-info li {
@@ -47,7 +47,7 @@
     color: rgb(255, 255, 255);
     border: 5px solid rgb(156, 109, 47);
     border-radius: 12px;
-    padding: 1rem;
+    padding:0.5%;
     transition: background 0.2s ease;
   }
 

@@ -77,6 +77,8 @@
     background-color: rgba(2, 42, 47, 0.5); /* semi-transparent overlay */
     border-radius: 10px;
     padding: 7%;
+    padding-top: 0.5%;
+    padding-bottom: 3.5%;
   }
 
   img {
@@ -143,6 +145,7 @@
     .login_overlay {
       width: 100%;
       height: 90vh;
+      overflow-y: auto;
       position: relative;
     }
     .whatsapp-icon{

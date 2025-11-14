@@ -197,10 +197,12 @@
     .services-section{
         background-color: rgba(23, 59, 58, 0.8);
         border-radius: 10px;
-        padding: 1rem;
+        padding-top: 1rem;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         flex: 1;
-        min-width: 0;
+        width: auto;
         height: 100%;
         justify-content: center; /* horizontal centering */
         align-items: center;     /* vertical centering */

@@ -39,6 +39,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
   .services-info li {

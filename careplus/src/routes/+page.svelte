@@ -143,6 +143,7 @@
       width: 100%;
       height: 90vh;
       position: relative;
+      overflow: hidden;
     }
     .whatsapp-icon{
       display: none;

@@ -48,7 +48,7 @@
     height: 100%;
     text-align: center;
     font-family: Arial, sans-serif;
-    background-image: url("src/lib/assets/images/banner.jpg");
+    background-image: url("/assets/images/banner.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,6 +129,16 @@
     .whatsapp-icon img:hover{
         opacity: 1;
     }
+  
+  @media(max-width: 1024px){
+    .login-page {
+      max-width: 100%;
+    } 
+    .login_overlay {
+      padding: 1.5%;
+      width: 100%;
+    }
+  }
 
 </style>
 

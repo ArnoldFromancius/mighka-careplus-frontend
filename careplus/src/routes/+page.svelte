@@ -133,6 +133,7 @@
   @media(max-width: 1024px){
     .login-page {
       max-width: 100%;
+      height: 100vh;
     } 
     .login_overlay {
       padding: 1.5%;

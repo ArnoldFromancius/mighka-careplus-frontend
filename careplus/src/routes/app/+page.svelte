@@ -112,6 +112,7 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+   
 
     /* Header styles */
     header{
@@ -490,6 +491,7 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0%;
+        padding-top: 1%;
         margin: 0%;
         height: 15px;
         flex-shrink: 0;

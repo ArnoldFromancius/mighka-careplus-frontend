@@ -136,7 +136,6 @@
       height: 100vh;
     } 
     .login_overlay {
-      padding: 1.5%;
       width: 100%;
       height: 100vh;
     }

@@ -78,7 +78,7 @@
     border-radius: 10px;
     padding: 7%;
     padding-top: 0.5%;
-    padding-bottom: 3.5%;
+    padding-bottom: 8.5%;
   }
 
   img {

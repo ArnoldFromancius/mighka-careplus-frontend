@@ -132,6 +132,9 @@
     }
   
   @media(max-width: 1024px){
+    main{
+      height: 100vh;
+    }
     .login-page {
       max-width: 100%;
       height: 95vh;

@@ -107,7 +107,9 @@
 
 	<div class="schedule-list">
 	
-	
+		<div class="placeholder">
+			<p>Please log in to view your schedule.</p>
+		</div>
 	<!-- /* Placeholder items.
 		{#each filteredSchedules() as item}
 			<div class="schedule-item">
@@ -225,6 +227,16 @@
 		flex-direction: column;
 		gap: 1rem;
 		overflow-y: auto;
+	}
+
+	.placeholder {
+		text-align: center;
+		color: #777;
+		font-size: 1rem;
+		padding: 2rem;
+		border: 2px dashed #ccc;
+		border-radius: 10px;
+		color: #ccc;
 	}
 
 	.schedule-item {

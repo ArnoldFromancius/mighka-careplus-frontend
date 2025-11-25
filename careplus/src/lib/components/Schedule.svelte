@@ -104,7 +104,7 @@
 			>Completed</button
 		>
 	</div>
-
+<!-- /*
 	<div class="schedule-list">
 		{#each filteredSchedules() as item}
 			<div class="schedule-item">
@@ -121,7 +121,7 @@
 			</div>
 		{/each}
 	</div>
-
+*/ -->
 	{#if showModal}
 		<div class="modal-backdrop" on:click={closeModal}></div>
 		<div class="modal">

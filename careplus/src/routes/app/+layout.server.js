@@ -1,27 +1,30 @@
+
 import { redirect } from '@sveltejs/kit';
-/*
-export const load = async ({ cookies, url }) => {
-	let user = cookies.get('user');
-
-	//Allow guest users via ?guest=true
-	if (url.searchParams.get('guest') === 'true') {
-		return { user: { role: 'guest', name: 'Guest User' } };
-	}
-
-	if (!user) {
-		throw redirect(303, '/');
-	}
-
-	return { user: JSON.parse(user) };
-};
-*/
 
 export function load({ cookies }) {
     const session = cookies.get("session");
+
+    // No session = GUEST
     if (!session) {
-        return { isGuest: true };
+        return { user: { role: 'guest', name: 'Guest User', isGuest: true } };
     }
 
-    const user = JSON.parse(session);
-    return { user, isGuest: false };
+    // Parse existing session
+    let data;
+    try {
+        data = JSON.parse(session);
+    } catch {
+        return {
+            user: null,
+            role: null,
+            isGuest: true
+        };
+    }
+
+    return {
+        user: { id: data.id },
+        role: data.role,
+        isGuest: false
+    };
 }
+

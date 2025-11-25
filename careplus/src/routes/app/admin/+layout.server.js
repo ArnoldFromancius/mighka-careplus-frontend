@@ -1,3 +1,4 @@
+// src/routes/app/+layout.server.js
 import { redirect } from '@sveltejs/kit';
 /*
 export const load = async ({ cookies, url }) => {
@@ -18,10 +19,11 @@ export const load = async ({ cookies, url }) => {
 
 export function load({ cookies }) {
     const session = cookies.get("session");
-    if (!session) {
-        return { isGuest: true };
-    }
+    if (!session) throw redirect(302, "/");
 
     const user = JSON.parse(session);
-    return { user, isGuest: false };
+
+    if (user.role !== "admin") throw redirect(302, "/app");
+
+    return { user };
 }

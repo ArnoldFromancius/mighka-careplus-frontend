@@ -1,4 +1,4 @@
-import { fail, redirect } from '@sveltejs/kit';
+/*import { fail, redirect } from '@sveltejs/kit';
 
 export const actions = {
   login: async ({ request, cookies }) => {
@@ -43,4 +43,36 @@ export const actions = {
     }
   }
 };
+*/
+
+import { redirect, fail } from "@sveltejs/kit";
+
+export async function actions({ request, cookies }) {
+    const form = await request.formData();
+    const email = form.get("email");
+    const password = form.get("password");
+
+    // 1. Validate credentials in database
+    const user = await checkUser(email, password);
+
+    if (!user) {
+        return fail(400, { error: "Invalid credentials" });
+    }
+
+    // 2. Store session cookie (or jwt)
+    cookies.set("session", JSON.stringify({
+        id: user._id,
+        role: user.role
+    }), {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 7
+    });
+
+    // 3. Redirect by role
+    if (user.role === "admin") throw redirect(302, "/app/admin");
+    if (user.role === "client") throw redirect(302, "/app/client");
+
+    // fallback
+    throw redirect(302, "/app");
+}
 
